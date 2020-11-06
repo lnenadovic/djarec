@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recommender</title>
+  </head>
+  <body>
+    <h1>Toy model for recommender system</h1>
+    <h2>Get the prediction on item rating.</h2>
+    <p>Enter the customer id (0-138492) and item id (0-26743) to obtain rating.</p>
+
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+      <p>User id:</p>
+      <input type="text" name="user_id">
+      <p>Item id:</p>
+      <input type="text" name="item_id">
+      <br>
+      <input type="submit">
+
+    </form>
+
+  </body>
+</html>
